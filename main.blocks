@@ -1,0 +1,20 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="t_D?[%GDskxd4x*7I-Pa">Player</variable><variable type="KIND_SpriteKind" id="E#Z-Px-SXlNI=R$vw3hs">Projectile</variable><variable type="KIND_SpriteKind" id="z2bOsx-Z-!;~J9jNjaR:">Food</variable><variable type="KIND_SpriteKind" id="y$}UGatig6JG#HY0QsQb">Enemy</variable><variable id="FE=fN~iJfBm4lz/PON[e">rocketship</variable><variable id="EZ+o@q4q~IT$EuO}CwB+">mySprite</variable></variables><block type="pxt-on-start" x="65" y="76"><statement name="HANDLER"><block type="variables_set"><field name="VAR" id="FE=fN~iJfBm4lz/PON[e">rocketship</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . f f . . . . . . 
+. . . . . f 1 2 f . . . . . 
+. . . . f 1 2 2 c f . . . . 
+. . . . f 2 2 c c f . . . . 
+. . . f c c c c c c f . . . 
+. . . f 1 1 1 1 1 1 f . . . 
+. . . f 1 1 b b 1 1 f . . . 
+. . . f 1 b 1 c b d f . . . 
+. . . f 1 b c f b d f . . . 
+. . . f 1 1 b b 1 d f . . . 
+. . . f 1 1 1 1 d d f . . . 
+. . . f d 1 1 d d d f . . . 
+. . . f d d d d d b f . . . 
+. . f 2 d d 2 c b b c f . . 
+. f 2 2 b d 2 c b b c c f . 
+f 2 2 c b b c c b b c c c f 
+f c c c b b c c b b c c c f 
+. f f f f f f f f f f f f . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="gamesetbackgroundcolor"><value name="color"><shadow type="colorindexpicker"><field name="index">12</field></shadow></value><next><block type="particlesStartScreenAnimation"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><field name="effect">effects.starField</field><next><block type="Sprite_blockCombine_set"><field name="property">Sprite.y@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="FE=fN~iJfBm4lz/PON[e">rocketship</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">110</field></shadow></value><next><block type="gamecountdown"><value name="duration"><shadow type="math_number"><field name="NUM">3</field></shadow></value></block></next></block></next></block></next></block></next></block></statement></block><block type="gamecountdownevent" x="130" y="670"><statement name="HANDLER"><block type="camerashake"><value name="amplitude"><shadow type="math_number_minmax"><mutation min="1" max="8" label="Amplitude" precision="0"/><field name="SLIDER">3</field></shadow></value><value name="duration"><shadow type="timePicker"><field name="ms">500</field></shadow></value><next><block type="controls_repeat_ext"><value name="TIMES"><shadow type="math_whole_number"><field name="NUM">9</field></shadow></value><statement name="DO"><block type="startEffectOnSprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><field name="effect">effects.fire</field><value name="sprite"><block type="variables_get"><field name="VAR" id="FE=fN~iJfBm4lz/PON[e">rocketship</field></block></value><next><block type="Sprite_blockCombine_change"><field name="property">Sprite.ay@set</field><value name="mySprite"><block type="variables_get"><field name="VAR" id="FE=fN~iJfBm4lz/PON[e">rocketship</field></block></value><value name="value"><shadow type="math_number"><field name="NUM">-30</field></shadow></value></block></next></block></statement></block></next></block></statement></block></xml>

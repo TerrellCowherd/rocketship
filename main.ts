@@ -1,3 +1,6 @@
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    game.reset()
+})
 info.onCountdownEnd(function () {
     scene.cameraShake(3, 500)
     for (let index = 0; index < 9; index++) {
@@ -26,7 +29,7 @@ f 2 2 c b b c c b b c c c f
 f c c c b b c c b b c c c f 
 . f f f f f f f f f f f f . 
 `, SpriteKind.Player)
-scene.setBackgroundColor(12)
+scene.setBackgroundColor(15)
 effects.starField.startScreenEffect()
 rocketship.y = 110
 info.startCountdown(3)
